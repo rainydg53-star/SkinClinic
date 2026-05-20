@@ -1,0 +1,37 @@
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs / runtime files
+logs/
+*.log
+*.out
+*.err
+*.pid
+*.pid.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Build / cache artifacts
+dist/
+build/
+bin/
+out/
+coverage/
+.gradle/
+.cache/
+.tmp/
+tmp/

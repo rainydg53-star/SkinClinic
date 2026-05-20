@@ -1,0 +1,623 @@
+.admin-main-page {
+  padding: 28px;
+}
+
+.admin-main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.admin-main-header h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  color: #1f2937;
+}
+
+.admin-main-header p {
+  margin: 0;
+  color: #667085;
+}
+
+.admin-main-header button {
+  border: 1px solid #d0d5dd;
+  border-radius: 12px;
+  background: #fff;
+  color: #1d4ed8;
+  font-weight: 700;
+  height: 44px;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.admin-main-header button:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+.admin-main-error {
+  margin: 0 0 14px;
+  color: #d92d20;
+}
+
+.admin-main-period-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.admin-main-period-filter button {
+  border: 1px solid #d0d5dd;
+  border-radius: 999px;
+  background: #fff;
+  color: #475467;
+  height: 34px;
+  padding: 0 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-main-period-filter button.active {
+  background: #eff8ff;
+  border-color: #84caff;
+  color: #1849a9;
+}
+
+.admin-main-period-label {
+  margin-left: 6px;
+  color: #667085;
+  font-size: 13px;
+}
+
+.admin-main-period-month-input {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 4px;
+  color: #667085;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.admin-main-period-month-input input {
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  height: 34px;
+  padding: 0 10px;
+  background: #fff;
+  color: #344054;
+  font-weight: 600;
+}
+
+.admin-main-month-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+.admin-main-month-modal {
+  width: min(360px, calc(100vw - 24px));
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 18px;
+  box-shadow: 0 24px 40px rgba(2, 6, 23, 0.2);
+}
+
+.admin-main-month-modal h4 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 19px;
+}
+
+.admin-main-month-modal p {
+  margin: 8px 0 14px;
+  color: #667085;
+  font-size: 14px;
+}
+
+.admin-main-month-modal-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.admin-main-month-modal-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  color: #667085;
+  font-weight: 700;
+}
+
+.admin-main-month-modal-fields select {
+  width: 100%;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  height: 42px;
+  padding: 0 12px;
+  color: #111827;
+  font-weight: 600;
+  background: #fff;
+}
+
+.admin-main-month-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.admin-main-month-modal-actions button {
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  height: 36px;
+  padding: 0 14px;
+  background: #ffffff;
+  color: #475467;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-main-month-modal-actions button.apply {
+  border-color: #84caff;
+  background: #eff8ff;
+  color: #1849a9;
+}
+
+.admin-main-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.admin-main-sales-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.admin-main-kpi-card {
+  background: #fff;
+  border: 1px solid #edf0f5;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-main-kpi-card span {
+  color: #667085;
+  font-size: 13px;
+}
+
+.admin-main-kpi-card strong {
+  color: #111827;
+  font-size: 24px;
+}
+
+.admin-main-kpi-card.disabled strong {
+  color: #98a2b3;
+}
+
+.admin-main-kpi-card.rate small {
+  color: #667085;
+  font-size: 12px;
+}
+
+.admin-main-kpi-card.rate.positive {
+  border-color: #b7eb8f;
+}
+
+.admin-main-kpi-card.rate.positive strong {
+  color: #107c10;
+}
+
+.admin-main-kpi-card.rate.negative {
+  border-color: #ffd2cc;
+}
+
+.admin-main-kpi-card.rate.negative strong {
+  color: #d92d20;
+}
+
+.admin-main-kpi-card.rate.neutral strong {
+  color: #475467;
+}
+
+.admin-main-payment-panel {
+  background: #fff;
+  border: 1px solid #edf0f5;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.admin-main-payment-panel h3 {
+  margin: 0 0 12px;
+}
+
+.admin-main-payment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.admin-main-payment-grid div {
+  border: 1px solid #eef1f6;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.admin-main-payment-grid span {
+  display: block;
+  font-size: 12px;
+  color: #667085;
+  margin-bottom: 5px;
+}
+
+.admin-main-payment-grid strong {
+  color: #111827;
+  font-size: 18px;
+}
+
+.admin-main-top-procedure-panel {
+  background: #fff;
+  border: 1px solid #edf0f5;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.admin-main-top-procedure-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.admin-main-top-procedure-header h3 {
+  margin: 0;
+}
+
+.admin-main-top-procedure-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-main-top-procedure-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-main-top-procedure-tabs button {
+  border: 1px solid #d0d5dd;
+  border-radius: 999px;
+  height: 34px;
+  padding: 0 12px;
+  background: #fff;
+  color: #475467;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-main-top-procedure-tabs button.active {
+  background: #eff8ff;
+  border-color: #84caff;
+  color: #1849a9;
+}
+
+.admin-main-satisfaction-btn {
+  border: 1px solid #facc15;
+  border-radius: 999px;
+  height: 34px;
+  padding: 0 14px;
+  background: #fffbeb;
+  color: #92400e;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-main-top-procedure-empty {
+  margin: 0;
+  color: #667085;
+}
+
+.admin-main-top-procedure-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.admin-main-top-procedure-item {
+  border: 1px solid #eef1f6;
+  border-radius: 10px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  grid-template-areas:
+    "rank name"
+    "rank meta";
+  gap: 4px 10px;
+}
+
+.admin-main-top-procedure-item .rank {
+  grid-area: rank;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f2f4f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #344054;
+}
+
+.admin-main-top-procedure-item .name {
+  grid-area: name;
+  font-weight: 700;
+  color: #111827;
+}
+
+.admin-main-top-procedure-item .meta {
+  grid-area: meta;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: #667085;
+  font-size: 13px;
+}
+
+.admin-main-monthly-chart-panel {
+  background: #fff;
+  border: 1px solid #edf0f5;
+  border-radius: 14px;
+  padding: 18px;
+  margin-top: 18px;
+}
+
+.admin-main-monthly-chart-panel h3 {
+  margin: 0 0 12px;
+}
+
+.admin-main-monthly-chart-layout {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 980px);
+  gap: 15px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.admin-main-month-selector {
+  border: 1px solid #eef2f7;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fbfdff;
+}
+
+.admin-main-month-selector h4 {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.admin-main-month-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.admin-main-month-selector-grid button {
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  height: 30px;
+  background: #fff;
+  color: #475467;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.admin-main-month-selector-grid button.active {
+  border-color: #84caff;
+  background: #eff8ff;
+  color: #1849a9;
+}
+
+.admin-main-month-selector-summary {
+  margin-top: 10px;
+  border-top: 1px dashed #dbe3ee;
+  padding-top: 10px;
+}
+
+.admin-main-month-selector-summary span {
+  display: block;
+  font-size: 12px;
+  color: #667085;
+  margin-bottom: 4px;
+}
+
+.admin-main-month-selector-summary strong {
+  color: #1d4ed8;
+  font-size: 14px;
+}
+
+.admin-main-monthly-chart-wrap {
+  min-width: 0;
+}
+
+.admin-main-monthly-chart {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.admin-main-monthly-chart-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  z-index: 1;
+}
+
+.admin-main-monthly-chart-item .bar-wrap {
+  width: 100%;
+  height: 180px;
+  border: 1px solid #f2f4f7;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(180deg, #fbfdff 0%, #ffffff 100%);
+  overflow: hidden;
+}
+
+.admin-main-monthly-chart-item .bar {
+  width: 72%;
+  border-radius: 9px 9px 0 0;
+  background: linear-gradient(180deg, #34d399 0%, #22c55e 60%, #16a34a 100%);
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.28);
+}
+
+.admin-main-monthly-chart-item .month {
+  font-size: 12px;
+  color: #344054;
+  font-weight: 700;
+}
+
+.admin-main-monthly-chart-item.selected .month {
+  color: #1d4ed8;
+}
+
+.admin-main-monthly-chart-item.selected .bar {
+  background: linear-gradient(180deg, #60a5fa 0%, #3b82f6 60%, #2563eb 100%);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.28);
+}
+
+.admin-main-monthly-line-svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 190px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.admin-main-monthly-grid-line {
+  stroke: #e9eef5;
+  stroke-width: 1;
+  stroke-dasharray: 3 5;
+}
+
+.admin-main-monthly-line {
+  fill: none;
+  stroke: #7e22ce;
+  stroke-width: 2.8;
+  filter: drop-shadow(0 2px 4px rgba(126, 34, 206, 0.28));
+}
+
+.admin-main-monthly-point {
+  fill: #ef4444;
+  stroke: #ffffff;
+  stroke-width: 2.4;
+}
+
+.admin-main-monthly-point-label {
+  fill: #1f2937;
+  font-size: 10px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 1024px) {
+  .admin-main-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-main-sales-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-main-payment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-main-top-procedure-list {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-main-monthly-chart {
+    width: 100%;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    height: auto;
+  }
+
+  .admin-main-monthly-chart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-main-monthly-line-svg {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-main-page {
+    padding: 20px 14px;
+  }
+
+  .admin-main-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-main-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-main-sales-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-main-payment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-main-top-procedure-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-main-monthly-chart {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    height: auto;
+  }
+
+  .admin-main-monthly-chart-item .bar-wrap {
+    height: 140px;
+  }
+}

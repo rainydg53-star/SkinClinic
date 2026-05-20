@@ -1,0 +1,169 @@
+.admin-treatment-record-detail-page {
+  padding: 32px;
+}
+
+.admin-treatment-record-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.admin-treatment-record-detail-header h2 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  color: #222;
+}
+
+.admin-treatment-record-detail-header p {
+  margin: 0;
+  color: #666;
+}
+
+.admin-treatment-record-detail-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-treatment-record-detail-actions a,
+.admin-treatment-record-detail-actions button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #f1f3f5;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.admin-treatment-record-detail-actions a:hover,
+.admin-treatment-record-detail-actions button:hover {
+  background: #e9ecef;
+}
+
+.admin-treatment-record-detail-actions .admin-treatment-record-delete-button {
+  background: #ffe3e3;
+  color: #c92a2a;
+}
+
+.admin-treatment-record-detail-actions .admin-treatment-record-delete-button:hover {
+  background: #ffc9c9;
+}
+
+.admin-treatment-record-detail-error {
+  margin-bottom: 16px;
+  color: #d93025;
+  font-weight: 600;
+}
+
+.admin-treatment-record-notes-box,
+.admin-treatment-record-image-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.admin-treatment-record-notes-box {
+  margin-bottom: 24px;
+}
+
+.admin-treatment-record-notes-box h3,
+.admin-treatment-record-image-card h3 {
+  margin: 0 0 12px;
+  color: #222;
+}
+
+.admin-treatment-record-notes-box p {
+  margin: 0;
+  line-height: 1.7;
+  color: #555;
+}
+
+.admin-treatment-record-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.admin-treatment-record-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid #e5e5e5;
+  cursor: zoom-in;
+}
+
+.admin-treatment-record-image-placeholder {
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #ddd;
+  border-radius: 14px;
+  background: #fafafa;
+  color: #999;
+  text-align: center;
+  padding: 20px;
+}
+
+.admin-treatment-record-image-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 10000;
+}
+
+.admin-treatment-record-image-modal {
+  width: 100%;
+  max-width: 960px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.admin-treatment-record-image-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-treatment-record-image-modal-header button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #f1f3f5;
+  cursor: pointer;
+}
+
+.admin-treatment-record-image-modal-preview {
+  display: block;
+  width: 100%;
+  max-height: calc(90vh - 72px);
+  object-fit: contain;
+  background: #000;
+}
+
+@media (max-width: 900px) {
+  .admin-treatment-record-detail-header {
+    flex-direction: column;
+  }
+
+  .admin-treatment-record-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-treatment-record-image,
+  .admin-treatment-record-image-placeholder {
+    height: 260px;
+  }
+}

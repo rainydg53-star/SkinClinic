@@ -1,0 +1,274 @@
+.skin-diagnosis-page {
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 0 16px 32px;
+}
+
+.skin-diagnosis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.skin-diagnosis-header h1 {
+  margin: 0;
+}
+
+.skin-diagnosis-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.skin-diagnosis-tabs button {
+  border: 1px solid #d9e7e7;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.skin-diagnosis-tabs button.active {
+  background: #0a9b9a;
+  color: #fff;
+  border-color: #0a9b9a;
+}
+
+.skin-diagnosis-cta {
+  border: 0;
+  border-radius: 10px;
+  background: #0a9b9a;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+.skin-diagnosis-error {
+  margin-bottom: 12px;
+  border: 1px solid #f5c2c7;
+  background: #fff5f5;
+  color: #b42318;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.skin-diagnosis-card {
+  background: #fff;
+  border: 1px solid #d9e7e7;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.skin-diagnosis-card h2 {
+  margin: 0 0 10px;
+}
+
+.skin-diagnosis-info p {
+  margin: 6px 0;
+}
+
+.skin-diagnosis-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skin-diagnosis-item {
+  text-align: left;
+  border: 1px solid #d9e7e7;
+  border-radius: 10px;
+  background: #f9fafb;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.skin-diagnosis-item strong {
+  color: #1f2937;
+}
+
+.skin-diagnosis-item span {
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.diagnosis-subtitle {
+  margin: 0;
+  color: #6b7280;
+}
+
+.diagnosis-file-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.diagnosis-file-field input[type='file'] {
+  border: 1px solid #d9e7e7;
+  border-radius: 10px;
+  background: #f8fcfc;
+  color: #41505c;
+  font-family: inherit;
+  padding: 8px 10px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.diagnosis-file-field input[type='file']:hover {
+  border-color: #bcdede;
+  background: #f2f9f9;
+}
+
+.diagnosis-file-field input[type='file']:focus-visible {
+  outline: none;
+  border-color: #0a9b9a;
+  box-shadow: 0 0 0 3px rgba(10, 155, 154, 0.16);
+}
+
+.diagnosis-file-field input[type='file']::file-selector-button {
+  border: 1px solid #0a9b9a;
+  border-radius: 8px;
+  background: #0a9b9a;
+  color: #fff;
+  font-family: inherit;
+  padding: 7px 12px;
+  margin-right: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.diagnosis-file-field input[type='file']::-webkit-file-upload-button {
+  border: 1px solid #0a9b9a;
+  border-radius: 8px;
+  background: #0a9b9a;
+  color: #fff;
+  font-family: inherit;
+  padding: 7px 12px;
+  margin-right: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.diagnosis-actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.diagnosis-result-feedback {
+  margin: 24px 0 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.diagnosis-actions button {
+  border: 0;
+  border-radius: 10px;
+  padding: 8px 12px;
+  background: #0a9b9a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.diagnosis-actions button.secondary {
+  background: #eef6f6;
+  color: #41505c;
+}
+
+.diagnosis-actions button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.diagnosis-compare {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.diagnosis-frame {
+  border: 1px solid #d9e7e7;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f9fafb;
+}
+
+.diagnosis-frame__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #d9e7e7;
+  background: #fff;
+}
+
+.diagnosis-frame__title {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.diagnosis-frame__hint {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.diagnosis-frame__body {
+  height: 360px;
+  position: relative;
+}
+
+.diagnosis-image-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.diagnosis-image {
+  max-width: 100%;
+  max-height: 100%;
+  user-select: none;
+}
+
+.diagnosis-empty {
+  color: #6b7280;
+  padding: 16px;
+}
+
+.skin-diagnosis-region ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skin-diagnosis-region li {
+  border: 1px solid #d9e7e7;
+  border-radius: 8px;
+  padding: 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+@media (max-width: 680px) {
+  .skin-diagnosis-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .diagnosis-compare {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="~{fragments/head :: head('누리클리닉')}"></head>
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<section class="banner">
+    <div class="slide-container" id="slideContainer">
+        <div class="slide"><img th:src="@{/images/img1.jpg}" alt="배너1"></div>
+        <div class="slide"><img th:src="@{/images/img2.png}" alt="배너2"></div>
+        <div class="slide"><img th:src="@{/images/img3.jpg}" alt="배너3"></div>
+    </div>
+    <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
+</section>
+
+<section class="procedure-section">
+    <div class="slider-wrapper">
+        <div class="card-slider" id="cardSlider">
+            <div class="card"><h3>시술1</h3><p>잡티 제거 및 미백</p></div>
+            <div class="card"><h3>시술2</h3><p>잡티 제거 및 미백</p></div>
+            <div class="card"><h3>시술3</h3><p>잡티 제거 및 미백</p></div>
+            <div class="card"><h3>시술4</h3><p>모공 청소 및 수분</p></div>
+            <div class="card"><h3>시술5</h3><p>모공 청소 및 수분</p></div>
+            <div class="card"><h3>시술6</h3><p>모공 청소 및 수분</p></div>
+            <div class="card"><h3>시술7</h3><p>모공 청소 및 수분</p></div>
+            <div class="card"><h3>시술8</h3><p>모공 청소 및 수분</p></div>
+            <div class="card"><h3>시술9</h3><p>모공 청소 및 수분</p></div>
+        </div>
+         <div class="slider-controls">
+            <button class="nav-btn prev" onclick="scrollSlider(-1)">&#10094;</button>
+            <button class="nav-btn next" onclick="scrollSlider(1)">&#10095;</button>
+        </div>
+    </div>
+   
+</section>
+
+
+<div class="chatbot-icon">
+    <a href="#">💬</a>
+</div>
+</body>
+</html>

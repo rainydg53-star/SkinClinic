@@ -1,0 +1,62 @@
+:root {
+  --bg-page: #f8f8f8;
+  --bg-surface: #ffffff;
+  --bg-soft: #eef6f6;
+  --color-primary: #0a9b9a;
+  --color-primary-strong: #087f7f;
+  --color-text: #1f2937;
+  --color-text-muted: #5f6b76;
+  --color-border: #d9e7e7;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Orbit', sans-serif;
+  color: var(--color-text);
+  background: var(--bg-page);
+}
+
+footer,
+.footer,
+.app-footer,
+.site-footer {
+  background: var(--bg-page) !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  border-color: var(--color-border);
+}
+
+button {
+  cursor: pointer;
+}

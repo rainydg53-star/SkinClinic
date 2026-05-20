@@ -1,0 +1,550 @@
+.admin-page-shell {
+  min-height: 100vh;
+  padding: 40px 20px 80px;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(213, 170, 124, 0.14),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(125, 168, 177, 0.12),
+      transparent 20%
+    ),
+    linear-gradient(180deg, #eef8f8 0%, #e8f3f3 100%);
+}
+
+.admin-procedure-page {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(211, 148, 104, 0.16),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(111, 149, 164, 0.12),
+      transparent 22%
+    ),
+    linear-gradient(180deg, #f8fdfd 0%, #edf7f7 100%);
+}
+
+.admin-procedure-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(146, 121, 99, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(146, 121, 99, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 82%);
+  pointer-events: none;
+}
+
+.admin-procedure-page > * {
+  position: relative;
+}
+
+.admin-procedure-hero {
+  margin-bottom: 28px;
+  padding: 24px 26px;
+  border: 1px solid rgba(168, 132, 102, 0.18);
+  border-radius: 24px;
+  background: rgba(255, 252, 247, 0.88);
+  box-shadow: 0 24px 50px rgba(75, 53, 35, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.admin-procedure-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0a9b9a 0%, #0c7f7f 100%);
+  color: #efffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admin-procedure-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.admin-procedure-stat {
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fff 0%, #f6eee7 100%);
+  border: 1px solid rgba(170, 136, 104, 0.18);
+  box-shadow: 0 18px 30px rgba(84, 61, 43, 0.08);
+}
+
+.admin-procedure-stat span {
+  display: block;
+  color: #65838c;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admin-procedure-stat strong {
+  display: block;
+  margin-top: 8px;
+  color: #1f3f47;
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.admin-procedure-stat-time strong {
+  font-size: 18px;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.admin-procedure-emphasis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.admin-procedure-emphasis-card {
+  min-height: 170px;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 251, 246, 0.95) 0%,
+    rgba(247, 235, 224, 0.96) 100%
+  );
+  box-shadow: 0 18px 30px rgba(84, 61, 43, 0.08);
+}
+
+.admin-procedure-emphasis-card p {
+  margin-top: 10px;
+}
+
+.admin-procedure-history {
+  margin-top: 42px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(146, 184, 184, 0.24);
+}
+
+.admin-history-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+  padding: 0 2px;
+}
+
+.admin-history-count {
+  margin: 8px 0 0;
+  color: #69868e;
+  font-size: 14px;
+}
+
+.admin-procedure-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.admin-procedure-visual-card,
+.admin-procedure-history-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(248, 242, 235, 0.96) 100%
+  );
+  box-shadow: 0 18px 34px rgba(45, 99, 99, 0.08);
+}
+
+.admin-procedure-visual-head {
+  margin-bottom: 16px;
+}
+
+.admin-procedure-visual-head strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.admin-procedure-visual-head span {
+  color: #69868e;
+  font-size: 13px;
+}
+
+.admin-procedure-donut-layout {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.admin-procedure-donut {
+  width: 180px;
+  height: 180px;
+  transform: rotate(-90deg);
+}
+
+.admin-procedure-donut-base {
+  fill: none;
+  stroke: #efe4da;
+  stroke-width: 4;
+}
+
+.admin-procedure-donut circle {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.admin-procedure-donut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-procedure-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(195, 223, 223, 0.9);
+}
+
+.admin-procedure-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  flex: 0 0 12px;
+}
+
+.admin-procedure-legend-item p {
+  margin: 4px 0 0;
+  font-size: 13px;
+}
+
+.admin-procedure-bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.admin-procedure-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-procedure-bar-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.admin-procedure-bar-label span {
+  color: #69868e;
+  font-size: 13px;
+}
+
+.admin-procedure-bar-track {
+  width: 100%;
+  height: 14px;
+  border-radius: 999px;
+  background: #dcecec;
+  overflow: hidden;
+}
+
+.admin-procedure-bar-fill {
+  height: 100%;
+  min-width: 8px;
+  border-radius: 999px;
+}
+
+.admin-procedure-history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.admin-procedure-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.admin-procedure-card-rating {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 84px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0a9b9a 0%, #0c7f7f 100%);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 12px 22px rgba(142, 78, 49, 0.18);
+}
+
+.admin-procedure-card-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.admin-procedure-card-meta-item,
+.admin-procedure-score-item,
+.admin-member-empty {
+  border: 1px solid rgba(195, 223, 223, 0.9);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.admin-procedure-card-meta-item {
+  padding: 12px 14px;
+  border-radius: 14px;
+}
+
+.admin-procedure-card-meta-item span,
+.admin-procedure-score-item span {
+  display: block;
+  color: #65838c;
+  font-size: 12px;
+}
+
+.admin-procedure-card-meta-item strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 18px;
+}
+
+.admin-procedure-review-section {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(146, 184, 184, 0.2);
+}
+
+.admin-procedure-review-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-procedure-review-filters select {
+  min-width: 160px;
+  padding: 12px 40px 12px 14px;
+  border: 1px solid #e6d9cf;
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, #fffdfb 0%, #fffaf6 100%),
+    linear-gradient(45deg, transparent 50%, #8b6a57 50%),
+    linear-gradient(135deg, #8b6a57 50%, transparent 50%);
+  background-repeat: no-repeat;
+  background-size:
+    100% 100%,
+    9px 9px,
+    9px 9px;
+  background-position:
+    0 0,
+    calc(100% - 22px) calc(50% - 2px),
+    calc(100% - 16px) calc(50% - 2px);
+  color: #3b2f2a;
+  font-size: 14px;
+  appearance: none;
+}
+
+.admin-procedure-member-search-input {
+  min-width: 180px;
+  padding: 12px 14px;
+  border: 1px solid #e6d9cf;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #fffdfb 0%, #fffaf6 100%);
+  color: #3b2f2a;
+  font-size: 14px;
+}
+
+.admin-procedure-review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.admin-procedure-review-row {
+  padding: 16px 18px;
+  border: 1px solid rgba(195, 223, 223, 0.9);
+  border-radius: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(248, 242, 235, 0.96) 100%
+  );
+  box-shadow: 0 12px 24px rgba(45, 99, 99, 0.06);
+}
+
+.admin-procedure-review-row-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.admin-procedure-review-row-top p {
+  margin: 6px 0 0;
+  font-size: 13px;
+}
+
+.admin-procedure-review-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0a9b9a 0%, #0c7f7f 100%);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-procedure-review-comment {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 250, 244, 0.92);
+  color: #4b3d36;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.admin-procedure-review-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.admin-procedure-review-meta span {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid rgba(195, 223, 223, 0.9);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #7a6b61;
+  font-size: 12px;
+}
+
+.admin-member-empty {
+  padding: 18px;
+  border-radius: 16px;
+  color: #736760;
+  text-align: center;
+  font-size: 13px;
+}
+
+.admin-procedure-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.admin-procedure-page-button {
+  min-width: 78px;
+  height: 40px;
+  border: 1px solid #dcc9bc;
+  border-radius: 12px;
+  background: #fff;
+  color: #5f5148;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-procedure-page-button:hover:not(:disabled) {
+  background: #f8f1eb;
+}
+
+.admin-procedure-page-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.admin-procedure-page-indicator {
+  color: #7a6b61;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-procedure-score-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.admin-procedure-score-item {
+  padding: 10px 12px;
+  border-radius: 14px;
+}
+
+.admin-procedure-score-item strong {
+  display: block;
+  margin-top: 5px;
+  color: #3b2f2a;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .admin-page-shell {
+    padding: 24px 14px 56px;
+  }
+
+  .admin-procedure-hero {
+    padding: 20px;
+  }
+
+  .admin-procedure-score-list,
+  .admin-procedure-visual-grid,
+  .admin-procedure-card-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-procedure-review-filters,
+  .admin-procedure-review-filters select {
+    width: 100%;
+  }
+
+  .admin-procedure-donut-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-procedure-donut {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+  }
+
+  .admin-procedure-review-row-top,
+  .admin-history-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,39 @@
+.mypage-section-title{
+  font-size:22px;
+  margin-bottom:24px;
+  color:#333;
+}
+
+.mypage-menu-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.mypage-menu-card{
+  display:block;
+  padding:24px;
+  background:white;
+  border-radius:16px;
+  text-decoration:none;
+  color:#333;
+
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+
+  transition:all .2s;
+}
+
+.mypage-menu-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 6px 14px rgba(0,0,0,0.08);
+}
+
+.mypage-menu-card h3{
+  margin-bottom:10px;
+  color:#8d7b68;
+}
+
+.mypage-menu-card p{
+  font-size:14px;
+  color:#666;
+}

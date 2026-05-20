@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/head :: head('회원 목록')}"></head>
+
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<section class="admin-page">
+
+  <div class="admin-container">
+
+    <h2>회원 목록</h2>
+
+    <table class="admin-table">
+
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>아이디</th>
+        <th>이름</th>
+        <th>이메일</th>
+        <th>전화번호</th>
+        <th>권한</th>
+      </tr>
+      </thead>
+
+      <tbody>
+
+      <tr th:each="member : ${memberList}">
+
+        <td th:text="${member.id}"></td>
+
+        <td>
+          <a th:href="@{/admin/members/{id}(id=${member.id})}"
+             th:text="${member.loginId}"></a>
+        </td>
+
+        <td th:text="${member.name}"></td>
+
+        <td th:text="${member.email}"></td>
+
+        <td th:text="${member.phone}"></td>
+
+        <td th:text="${member.role}"></td>
+
+      </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+</body>
+</html>

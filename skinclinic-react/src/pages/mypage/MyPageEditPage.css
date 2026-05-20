@@ -1,0 +1,74 @@
+.edit-btn-group {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.edit-submit-btn,
+.edit-password-btn {
+  flex: 1;
+  height: 56px;
+  border-radius: 16px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Orbit', sans-serif;
+  font-size: 15px;
+  line-height: 1;
+  text-decoration: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.edit-submit-btn {
+  border: 2px solid #c8b8a3;
+  background: #c8b8a3;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-submit-btn:hover {
+  background: #b8aa96;
+  border-color: #b8aa96;
+}
+
+.edit-password-btn {
+  border: 2px solid #d9d4cc;
+  background: white;
+  color: #8d7b68;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-password-btn:hover {
+  background: #f5f3ef;
+}
+
+.readonly-input {
+  background: #f8f6f2;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.form-success {
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #eef7f7;
+  color: #4f6f79;
+  font-size: 14px;
+  font-family: 'Orbit', sans-serif;
+}
+
+.page-status {
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Orbit', sans-serif;
+  font-size: 18px;
+  color: #8d7b68;
+}

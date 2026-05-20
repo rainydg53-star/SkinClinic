@@ -1,0 +1,291 @@
+.admin-procedure-page {
+  padding: 60px 20px;
+  background: #f7f4ef;
+  min-height: calc(100vh - 80px);
+}
+
+.admin-procedure-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-procedure-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 20px;
+}
+
+.admin-procedure-title {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.admin-procedure-subtitle {
+  font-size: 14px;
+  color: #8d7b68;
+}
+
+.admin-procedure-create-btn {
+  min-width: 120px;
+  height: 52px;
+  padding: 0 20px;
+  border-radius: 16px;
+  border: 2px solid #c8b8a3;
+  background: #c8b8a3;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Orbit', sans-serif;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.admin-procedure-create-btn:hover {
+  background: #b8aa96;
+  border-color: #b8aa96;
+}
+
+.admin-procedure-table-wrap {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.admin-procedure-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-procedure-table thead {
+  background: #eef7f7;
+}
+
+.admin-procedure-table th,
+.admin-procedure-table td {
+  padding: 18px 16px;
+  text-align: center;
+  border-bottom: 1px solid #eee7de;
+  font-size: 14px;
+}
+
+.admin-procedure-table th {
+  color: #8d7b68;
+  font-weight: 600;
+}
+
+.admin-procedure-table td {
+  color: #555;
+}
+
+.empty-row {
+  padding: 40px 0 !important;
+  color: #999;
+}
+
+.visible-badge,
+.hidden-badge {
+  display: inline-block;
+  min-width: 58px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.visible-badge {
+  background: #edf7ef;
+  color: #3f7f4f;
+}
+
+.hidden-badge {
+  background: #f3f3f3;
+  color: #888;
+}
+
+.admin-action-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-edit-link {
+  min-width: 60px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid #d9d4cc;
+  background: #f7f4ef;
+  color: #8d7b68;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.admin-edit-link:hover {
+  background: #efe9df;
+  border-color: #cfc6ba;
+}
+
+.admin-delete-btn {
+  min-width: 60px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid #e4caca;
+  background: #fbf3f3;
+  color: #b06b6b;
+  font-family: 'Orbit', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-delete-btn:hover {
+  background: #f4e3e3;
+  border-color: #d9b2b2;
+}
+
+.admin-procedure-status {
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Orbit', sans-serif;
+  font-size: 18px;
+  color: #8d7b68;
+}
+
+.admin-procedure-status.error {
+  color: #c44;
+}
+
+/* 삭제 확인 모달 */
+
+.admin-procedure-delete-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(80, 68, 57, 0.28);
+  z-index: 3000;
+}
+
+.admin-procedure-delete-modal-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 380px;
+  background: white;
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-sizing: border-box;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.admin-procedure-delete-modal-box h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.admin-procedure-delete-modal-box p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #8d7b68;
+}
+
+.admin-procedure-delete-modal-btn-group {
+  display: flex;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.admin-procedure-delete-modal-confirm-btn,
+.admin-procedure-delete-modal-cancel-btn {
+  flex: 1;
+  height: 52px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Orbit', sans-serif;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-procedure-delete-modal-confirm-btn {
+  border: 2px solid #d98b8b;
+  background: #d98b8b;
+  color: white;
+}
+
+.admin-procedure-delete-modal-confirm-btn:hover {
+  background: #c97777;
+  border-color: #c97777;
+}
+
+.admin-procedure-delete-modal-cancel-btn {
+  border: 2px solid #d9d4cc;
+  background: white;
+  color: #8d7b68;
+}
+
+.admin-procedure-delete-modal-cancel-btn:hover {
+  background: #f5f3ef;
+}
+
+@media (max-width: 900px) {
+  .admin-procedure-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-procedure-table-wrap {
+    overflow-x: auto;
+  }
+
+  .admin-procedure-table {
+    min-width: 760px;
+  }
+  .admin-procedure-thumb-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-procedure-thumb {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.admin-procedure-thumb-placeholder {
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #f5f5f5;
+  color: #999;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+}
+

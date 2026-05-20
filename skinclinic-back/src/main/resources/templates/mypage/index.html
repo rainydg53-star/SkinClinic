@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="~{fragments/head :: head('마이페이지')}"></head>
+
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+<div th:if="${successMessage}" class="toast-message">
+    <span th:text="${successMessage}"></span>
+</div>
+
+<section class="mypage-page">
+    <div class="mypage-container">
+        <div class="mypage-profile-card">
+            <div class="mypage-profile-top">
+                <div class="profile-image">👤</div>
+                <div class="profile-info">
+                    <h2>마이페이지</h2>
+                    <p>회원 정보를 확인하고 수정할 수 있습니다.</p>
+                </div>
+            </div>
+
+            <div class="mypage-user-info">
+                <div class="info-row">
+                    <span class="info-label">아이디</span>
+                    <span class="info-value" th:text="${member != null ? member.loginId : 'guest'}">nuri123</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">이름</span>
+                    <span class="info-value" th:text="${member != null ? member.name : '누리회원'}">홍길동</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">이메일</span>
+                    <span class="info-value" th:text="${member != null ? member.email : 'example@email.com'}">example@email.com</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">전화번호</span>
+                    <span class="info-value" th:text="${member != null ? member.phone : '01012345678'}">01012345678</span>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="mypage-menu-grid">
+            <a href="#" class="mypage-menu-card">
+                <h3>예약 내역</h3>
+                <p>시술 예약 현황과 방문 일정을 확인하세요.</p>
+            </a>
+
+            <a href="#" class="mypage-menu-card">
+                <h3>피부 진단 결과</h3>
+                <p>내 피부 상태와 진단 결과를 모아볼 수 있어요.</p>
+            </a>
+
+            <a href="#" class="mypage-menu-card">
+                <h3>맞춤 추천</h3>
+                <p>내 피부에 맞는 시술 추천 내역을 확인해보세요.</p>
+            </a>
+
+            <a th:href="@{/members/edit}" class="mypage-menu-card">
+                <h3>회원정보 수정</h3>
+                <p>이름, 이메일, 전화번호 등 회원 정보를 수정하세요.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

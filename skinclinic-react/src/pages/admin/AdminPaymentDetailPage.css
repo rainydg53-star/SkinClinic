@@ -1,0 +1,105 @@
+.admin-payment-detail-page {
+  padding: 32px;
+}
+
+.admin-payment-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.admin-payment-detail-header h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.admin-payment-detail-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-payment-detail-actions button,
+.back-link {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.admin-payment-detail-card {
+  padding: 24px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  color: #5b7f88;
+  font-weight: 700;
+}
+
+.value {
+  color: #222;
+  text-align: right;
+}
+
+.admin-payment-reservation-box {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+.admin-payment-reservation-box h3 {
+  margin: 0 0 10px;
+}
+
+.admin-payment-reservation-box p {
+  margin: 0;
+  color: #667085;
+}
+
+.admin-payment-error {
+  margin-bottom: 16px;
+  color: #d93025;
+}
+
+.admin-payment-refund-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.admin-payment-refund-btn {
+  min-width: 160px;
+  height: 40px;
+  border: 1px solid #f0b3b3;
+  border-radius: 10px;
+  background: #fdecec;
+  color: #b42318;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-payment-refund-btn:disabled {
+  opacity: 0.65;
+  cursor: default;
+}

@@ -1,0 +1,339 @@
+.recommendation-page {
+  min-height: 100vh;
+  background: #f7f4f1;
+  padding: 40px 20px 80px;
+}
+
+.recommendation-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.recommendation-header-card,
+.recommendation-summary-card,
+.recommendation-meta-card,
+.recommendation-list-card,
+.recommendation-history-card,
+.procedure-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.recommendation-header-card,
+.recommendation-meta-card,
+.recommendation-list-card,
+.recommendation-history-card {
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.recommendation-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  color: #9a7b68;
+  margin-bottom: 8px;
+}
+
+.recommendation-header-card h1 {
+  margin: 0 0 12px;
+  font-size: 34px;
+}
+
+.recommendation-subtitle {
+  color: #6f625a;
+  margin: 0;
+}
+
+.recommendation-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.recommendation-summary-card {
+  padding: 22px;
+}
+
+.recommendation-summary-card span {
+  display: block;
+  color: #8f8178;
+  margin-bottom: 8px;
+}
+
+.recommendation-summary-card strong {
+  font-size: 22px;
+}
+
+.chip-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #f0e7e0;
+  color: #6d584c;
+  font-weight: 600;
+}
+
+.procedure-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.procedure-card {
+  padding: 22px;
+  border: 1px solid #eee3dc;
+}
+
+.procedure-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.procedure-code {
+  margin: 0 0 6px;
+  color: #9c7d69;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.procedure-card h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.procedure-score {
+  min-width: 84px;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #f3ece6;
+  color: #7c6458;
+  font-weight: 700;
+}
+
+.procedure-description {
+  margin: 14px 0 18px;
+  color: #5e5651;
+  line-height: 1.6;
+}
+
+.procedure-reasons strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.procedure-reasons ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #5e5651;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: #faf7f4;
+  border: 1px solid #ede2da;
+  cursor: pointer;
+}
+
+.history-item.active {
+  background: #efe4dc;
+  border-color: #caa791;
+}
+
+.history-item strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.history-item p {
+  margin: 0;
+  color: #655b55;
+}
+
+.history-item span {
+  color: #8a7d74;
+  font-size: 14px;
+}
+
+.recommendation-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.recommendation-actions button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 999px;
+  background: #9b7d6c;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.recommendation-actions button:hover {
+  opacity: 0.92;
+}
+
+/* 1. 페이징 컨트롤러 스타일 추가 */
+.pagination-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+  padding: 20px 0;
+  border-top: 1px dashed #ede2da;
+}
+
+.paging-btn {
+  padding: 10px 24px;
+  border: 1px solid #9b7d6c;
+  background: #fff;
+  color: #9b7d6c;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.paging-btn:hover:not(:disabled) {
+  background: #9b7d6c;
+  color: #fff;
+}
+
+.paging-btn:disabled {
+  border-color: #d1c7c0;
+  color: #d1c7c0;
+  cursor: not-allowed;
+  background: #fafafa;
+}
+
+.page-indicator {
+  font-size: 15px;
+  color: #6d584c;
+}
+
+.page-indicator strong {
+  color: #9b7d6c;
+  font-size: 18px;
+}
+
+/* 2. 히스토리 아이템 호버 효과 강화 */
+.history-item {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.history-item:hover:not(.active) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(155, 125, 108, 0.1);
+  border-color: #caa791;
+}
+
+/* 3. 로딩 애니메이션 (선택 사항) */
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.loading-text {
+  animation: pulse 1.5s infinite ease-in-out;
+  color: #9b7d6c;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* 4. 액션 버튼 스타일 다양화 (설문 결과 버튼은 조금 다르게) */
+.recommendation-actions button:nth-child(2) {
+  background: #fff;
+  color: #9b7d6c;
+  border: 1px solid #9b7d6c;
+}
+
+.recommendation-actions button:nth-child(2):hover {
+  background: #fdfaf8;
+}
+
+@media (max-width: 768px) {
+  .recommendation-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .procedure-card-top,
+  .history-item,
+  .recommendation-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.recommendation-answer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recommendation-answer-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #faf7f4;
+  border: 1px solid #ede2da;
+}
+
+.recommendation-answer-item strong {
+  font-size: 15px;
+}
+
+.recommendation-answer-item span {
+  color: #9b7d6c;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.procedure-rank {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #b18055;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 768px) {
+  .recommendation-answer-item {
+    flex-direction: column;
+  }
+}

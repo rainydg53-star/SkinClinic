@@ -1,0 +1,58 @@
+.mypage-withdraw-card {
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid #f0d6d6;
+  border-radius: 16px;
+  background: #fff7f7;
+}
+
+.mypage-withdraw-card h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #b42318;
+}
+
+.mypage-withdraw-card p {
+  margin: 0 0 16px;
+  color: #7a271a;
+  line-height: 1.5;
+}
+
+.mypage-withdraw-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e5c4c4;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.mypage-withdraw-input:focus {
+  outline: none;
+  border-color: #d92d20;
+  box-shadow: 0 0 0 3px rgba(217, 45, 32, 0.12);
+}
+
+.mypage-withdraw-btn {
+  margin-top: 14px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #d92d20;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.mypage-withdraw-btn:hover {
+  background: #b42318;
+}
+
+.mypage-withdraw-btn:disabled {
+  background: #e9a7a2;
+  cursor: not-allowed;
+}

@@ -1,0 +1,157 @@
+.find-id-page {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;
+  background: linear-gradient(180deg, #f3f2f0 0%, #ece8e1 100%);
+}
+
+.find-id-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 50px 40px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e5e1da;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.find-id-title-wrap {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.find-id-title {
+  margin-bottom: 10px;
+  font-size: 34px;
+  color: #222;
+}
+
+.find-id-subtitle {
+  font-size: 15px;
+  color: #777;
+}
+
+.find-id-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  font-size: 15px;
+  color: #222;
+  background-color: #fcfbf9;
+  border: 1px solid #d9d4cc;
+  border-radius: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #b8aa96;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(184, 170, 150, 0.12);
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+.find-id-btn {
+  height: 54px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+  background: #c8b8a3;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.find-id-btn:hover {
+  background: #b8aa96;
+}
+
+.form-error {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #d14b4b;
+  background-color: #fff1f1;
+  border-radius: 12px;
+}
+
+.form-success {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #2f7d4a;
+  background-color: #eefaf1;
+  border-radius: 12px;
+}
+
+.find-id-result {
+  margin-top: 24px;
+  padding: 20px;
+  text-align: center;
+  background: #f8f5f1;
+  border-radius: 16px;
+  border: 1px solid #e5ddd2;
+}
+
+.find-id-result p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.find-id-result strong {
+  font-size: 22px;
+  color: #8d7b68;
+}
+
+@media (max-width: 768px) {
+  .find-id-page {
+    min-height: calc(100vh - 88px);
+    padding: 20px 12px;
+  }
+
+  .find-id-card {
+    max-width: 100%;
+    padding: 32px 20px;
+    border-radius: 18px;
+  }
+
+  .find-id-title {
+    font-size: 28px;
+  }
+
+  .find-id-subtitle {
+    font-size: 14px;
+  }
+
+  .form-group input {
+    height: 48px;
+  }
+
+  .find-id-btn {
+    height: 50px;
+  }
+}

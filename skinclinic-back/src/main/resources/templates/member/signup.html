@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="~{fragments/head :: head('회원가입')}"></head>
+
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<section class="signup-page">
+    <div class="signup-card">
+        <div class="signup-title-wrap">
+            <h2 class="signup-title">회원가입</h2>
+            <p class="signup-subtitle">누리클리닉에서 맞춤 피부 관리를 시작해보세요.</p>
+        </div>
+
+        <div th:if="${errorMessage}" class="form-error" th:text="${errorMessage}"></div>
+
+        <form th:action="@{/members/signup}" th:object="${memberSignUpDto}" method="post" class="signup-form">
+            <input type="hidden" id="emailVerified" th:field="*{emailVerified}">
+
+            <div class="form-group">
+                <label for="loginId">아이디</label>
+                <input type="text" id="loginId" th:field="*{loginId}" placeholder="아이디를 입력하세요">
+                <div class="field-error" th:errors="*{loginId}"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" th:field="*{password}" placeholder="비밀번호를 입력하세요">
+                <div class="field-error" th:errors="*{password}"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="name">이름</label>
+                <input type="text" id="name" th:field="*{name}" placeholder="이름을 입력하세요">
+                <div class="field-error" th:errors="*{name}"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">이메일</label>
+                <div class="email-row">
+                    <input type="email"
+                           id="email"
+                           th:field="*{email}"
+                           placeholder="이메일을 입력하세요"
+                           oninput="resetEmailVerified()">
+                    <button type="button" id="sendEmailBtn" class="sub-btn" onclick="sendEmailCode()">인증번호 보내기</button>
+                </div>
+                <div class="field-error" th:errors="*{email}"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="emailCode">인증번호</label>
+                <div class="email-row">
+                    <input type="text" id="emailCode" placeholder="인증번호를 입력하세요">
+                    <button type="button" class="sub-btn" onclick="verifyEmail()">인증 확인</button>
+                </div>
+                <div id="emailVerifyMessage" class="field-info"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">전화번호</label>
+                <input type="text" id="phone" th:field="*{phone}" placeholder="'-' 없이 입력하세요">
+                <div class="field-error" th:errors="*{phone}"></div>
+            </div>
+
+            <button type="submit" id="signupBtn" class="signup-btn">회원가입</button>
+        </form>
+
+        <div class="signup-footer">
+            <span>이미 계정이 있으신가요?</span>
+            <a th:href="@{/members/login}">로그인</a>
+        </div>
+    </div>
+</section>
+
+<script>
+    function resetEmailVerified() {
+        document.getElementById("emailVerified").value = "false";
+
+        const msg = document.getElementById("emailVerifyMessage");
+        const signupBtn = document.getElementById("signupBtn");
+
+        msg.textContent = "";
+        msg.className = "field-info";
+
+        signupBtn.style.backgroundColor = "";
+        signupBtn.style.color = "";
+        signupBtn.style.borderColor = "";
+        signupBtn.textContent = "회원가입";
+    }
+
+    function sendEmailCode() {
+        const email = document.getElementById("email").value;
+        const sendBtn = document.getElementById("sendEmailBtn");
+        if (!email) {
+            alert("이메일을 입력해주세요.");
+            return;
+        }
+
+        sendBtn.disabled = true;
+        sendBtn.textContent = "전송중...";
+
+        fetch("/members/email/send", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: "email=" + encodeURIComponent(email)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("status: " + response.status);
+            }
+            return response.text();
+        })
+        .then(result => {
+            if (result === "success") {
+                alert("인증번호가 전송되었습니다.");
+            } else {
+                alert(result);
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            alert("인증번호 전송 중 오류가 발생했습니다.");
+        })
+         .finally(() => {
+            sendBtn.disabled = false;
+            sendBtn.textContent = "인증번호 보내기";
+        });
+    }
+
+    function verifyEmail() {
+        const email = document.getElementById("email").value;
+        const code = document.getElementById("emailCode").value;
+        const msg = document.getElementById("emailVerifyMessage");
+        const signupBtn = document.getElementById("signupBtn");
+
+        if (!email) {
+            alert("이메일을 입력해주세요.");
+            return;
+        }
+
+        if (!code) {
+            alert("인증번호를 입력해주세요.");
+            return;
+        }
+
+        fetch("/members/email/verify", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: "email=" + encodeURIComponent(email) + "&code=" + encodeURIComponent(code)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("status: " + response.status);
+            }
+            return response.json();
+        })
+        .then(result => {
+            if (result === true) {
+                document.getElementById("emailVerified").value = "true";
+                msg.textContent = "이메일 인증이 완료되었습니다.";
+                msg.className = "field-success";
+
+                signupBtn.style.backgroundColor = "#4CAF50";
+                signupBtn.style.color = "white";
+                signupBtn.style.borderColor = "#4CAF50";
+                signupBtn.textContent = "회원가입 가능";
+            } else {
+                document.getElementById("emailVerified").value = "false";
+                msg.textContent = "인증번호가 올바르지 않습니다.";
+                msg.className = "field-error";
+
+                signupBtn.style.backgroundColor = "";
+                signupBtn.style.color = "";
+                signupBtn.style.borderColor = "";
+                signupBtn.textContent = "회원가입";
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            document.getElementById("emailVerified").value = "false";
+            msg.textContent = "이메일 인증 중 오류가 발생했습니다.";
+            msg.className = "field-error";
+
+            signupBtn.style.backgroundColor = "";
+            signupBtn.style.color = "";
+            signupBtn.style.borderColor = "";
+            signupBtn.textContent = "회원가입";
+        });
+    }
+</script>
+
+</body>
+</html>

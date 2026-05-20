@@ -1,0 +1,193 @@
+.reserve-page {
+  max-width: 980px;
+  margin: 32px auto;
+  padding: 0 16px 32px;
+}
+
+.reserve-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.reserve-header h1 {
+  margin: 0;
+}
+
+.reserve-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.reserve-tabs button {
+  border: 1px solid #d9e7e7;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.reserve-tabs button.active {
+  background: #0a9b9a;
+  color: #fff;
+  border-color: #0a9b9a;
+}
+
+.reserve-error {
+  margin-bottom: 12px;
+  border: 1px solid #e7b4b4;
+  background: #fff5f5;
+  color: #8f2020;
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.reserve-error button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.reserve-panel {
+  border: 1px solid #d9e7e7;
+  border-radius: 14px;
+  padding: 16px;
+  background: #fff;
+}
+
+.reserve-panel h2 {
+  margin: 0 0 12px;
+}
+
+.reserve-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.reserve-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.reserve-grid input,
+.reserve-grid select {
+  border: 1px solid #d9e7e7;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.reserve-actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 8px;
+}
+
+.reserve-actions button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #0a9b9a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.reserve-actions button.secondary {
+  background: #eef6f6;
+  color: #41505c;
+}
+
+.reserve-actions button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.reserve-empty {
+  color: #6b7280;
+}
+
+.reserve-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reserve-day h3 {
+  margin: 0 0 8px;
+}
+
+.reserve-day ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #d9e7e7;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.reserve-day li {
+  display: grid;
+  grid-template-columns: 80px 1fr 120px 100px auto auto;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+  border-top: 1px solid #e9f2f2;
+}
+
+.reserve-day li:first-child {
+  border-top: 0;
+}
+
+.reserve-day .danger {
+  border: 0;
+  background: #ef4444;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.reserve-day .pay {
+  border: 0;
+  background: #0a9b9a;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.reserve-day .payment-state {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.reserve-day .payment-state.paid {
+  color: #0f7a43;
+}
+
+.reserve-day .payment-state.unpaid {
+  color: #b45309;
+}
+
+@media (max-width: 760px) {
+  .reserve-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reserve-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reserve-day li {
+    grid-template-columns: 1fr;
+  }
+}

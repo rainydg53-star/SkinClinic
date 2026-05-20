@@ -1,0 +1,249 @@
+.admin-member-detail-page {
+  padding: 32px;
+}
+
+.admin-member-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.admin-member-detail-header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.admin-member-detail-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-member-detail-actions a,
+.admin-member-detail-actions button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f1f3f5;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.admin-member-detail-actions button:hover,
+.admin-member-detail-actions a:hover {
+  background-color: #e9ecef;
+}
+
+.admin-member-detail-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.detail-row {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  width: 140px;
+  font-weight: 700;
+  color: #555;
+}
+
+.value {
+  flex: 1;
+  color: #222;
+}
+
+.admin-member-role-box,
+.admin-member-treatment-box {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.admin-member-role-box {
+  margin-bottom: 24px;
+}
+
+.admin-member-role-box h3,
+.admin-member-treatment-header h3 {
+  margin: 0 0 16px;
+}
+
+.admin-member-role-box select {
+  width: 220px;
+  padding: 10px 12px;
+  margin-right: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.admin-member-role-box button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.admin-member-role-box button:hover {
+  background-color: #111;
+}
+
+.admin-member-error {
+  margin-bottom: 14px;
+  color: #d93025;
+  font-weight: 600;
+}
+
+.admin-member-treatment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.admin-member-treatment-header p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.admin-member-treatment-create-link {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.admin-member-treatment-create-link:hover {
+  background: #111;
+}
+
+.admin-member-treatment-empty {
+  margin: 0;
+  color: #666;
+}
+
+.admin-member-treatment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.admin-member-treatment-card {
+  display: block;
+  padding: 18px;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  background: #fafafa;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.admin-member-treatment-card:hover {
+  transform: translateY(-1px);
+  border-color: #ddd;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.admin-member-treatment-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.admin-member-treatment-top strong {
+  color: #222;
+}
+
+.admin-member-treatment-top span {
+  color: #666;
+  font-size: 14px;
+}
+
+.admin-member-treatment-hint {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.admin-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.admin-modal {
+  width: 360px;
+  background: white;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  text-align: center;
+}
+
+.admin-modal h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  color: #222;
+}
+
+.admin-modal p {
+  margin: 0 0 24px;
+  font-size: 16px;
+  color: #555;
+}
+
+.admin-modal-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.admin-modal-buttons button {
+  min-width: 100px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.admin-modal-buttons button:hover {
+  background-color: #111;
+}
+
+@media (max-width: 900px) {
+  .admin-member-detail-header,
+  .admin-member-treatment-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

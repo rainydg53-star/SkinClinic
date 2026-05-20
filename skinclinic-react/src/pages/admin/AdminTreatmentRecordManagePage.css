@@ -1,0 +1,166 @@
+.admin-treatment-manage-page {
+  width: 100%;
+  max-width: 1460px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.admin-treatment-manage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-treatment-manage-header h2 {
+  margin: 0 0 6px;
+}
+
+.admin-treatment-manage-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.admin-treatment-manage-create-btn {
+  border: 1px solid #0a9b9a;
+  background: #0a9b9a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.admin-treatment-manage-search {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-treatment-manage-search input {
+  flex: 1;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.admin-treatment-manage-search button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #0f172a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.admin-treatment-manage-helper {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.admin-treatment-manage-error {
+  margin: 0;
+  border: 1px solid #f5c2c7;
+  background: #fff5f5;
+  color: #b42318;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.admin-treatment-manage-records {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.admin-treatment-manage-records table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.admin-treatment-manage-records th,
+.admin-treatment-manage-records td {
+  border-bottom: 1px solid #eee;
+  padding: 12px 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.admin-treatment-manage-records th {
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.admin-treatment-date-sort-btn {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+}
+
+.admin-treatment-manage-records th:nth-child(1),
+.admin-treatment-manage-records td:nth-child(1) {
+  width: 18%;
+}
+
+.admin-treatment-manage-records th:nth-child(2),
+.admin-treatment-manage-records td:nth-child(2) {
+  width: 20%;
+}
+
+.admin-treatment-manage-records th:nth-child(3),
+.admin-treatment-manage-records td:nth-child(3) {
+  width: 24%;
+}
+
+.admin-treatment-manage-records th:nth-child(4),
+.admin-treatment-manage-records td:nth-child(4) {
+  width: 20%;
+}
+
+.admin-treatment-manage-records th:nth-child(5),
+.admin-treatment-manage-records td:nth-child(5) {
+  width: 18%;
+}
+
+.admin-treatment-manage-records a {
+  color: #0a8f8f;
+  text-decoration: none;
+}
+
+.admin-treatment-manage-records a:hover {
+  text-decoration: underline;
+}
+
+.empty-row {
+  text-align: center;
+  color: #6b7280;
+}
+
+.admin-treatment-manage-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.admin-treatment-manage-pagination button {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.admin-treatment-manage-pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

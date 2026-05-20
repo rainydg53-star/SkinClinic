@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<body>
+<header th:fragment="header">
+  <div class="header-left">
+    <div class="logo">
+      <h2><a th:href="@{/}">누리클리닉</a></h2>
+    </div>
+
+    <nav class="nav-menu">
+      <a href="#">시술예약</a>
+      <a href="#">피부진단</a>
+    </nav>
+  </div>
+
+  <div class="auth-menu">
+    <div sec:authorize="isAnonymous()">
+      <a th:href="@{/members/login}" class="auth-link">로그인</a>
+      <a th:href="@{/members/signup}" class="auth-link">회원가입</a>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+      <a th:href="@{/members/mypage}" class="auth-link">마이페이지</a>
+      <form th:action="@{/logout}" method="post" class="logout-form">
+        <button type="submit" class="auth-link">로그아웃</button>
+      </form>
+    </div>
+  </div>
+</header>
+</body>
+</html>

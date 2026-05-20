@@ -1,0 +1,95 @@
+.admin-member-page {
+  padding: 32px;
+}
+
+.admin-member-header {
+  margin-bottom: 24px;
+}
+
+.admin-member-header h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.admin-member-header p {
+  margin: 0;
+  color: #666;
+}
+
+.admin-member-search-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-member-search-form input {
+  width: 280px;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.admin-member-search-form button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.admin-member-search-form button:hover {
+  background-color: #111;
+}
+
+.admin-member-error {
+  margin-bottom: 16px;
+  color: #d93025;
+  font-weight: 600;
+}
+
+.admin-member-table-wrap {
+  overflow-x: auto;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+
+.admin-member-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-member-table th,
+.admin-member-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  font-size: 14px;
+}
+
+.admin-member-table th {
+  background-color: #f8f8f8;
+  font-weight: 700;
+}
+
+.empty-row {
+  padding: 30px 0;
+  color: #888;
+}
+
+.detail-link {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #f1f3f5;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.detail-link:hover {
+  background-color: #e9ecef;
+}
