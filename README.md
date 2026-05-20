@@ -49,7 +49,7 @@
 
 📕 발표 PPT
 
-누리클리닉 발표 PPT
+[누리클리닉 발표 PPT](https://drive.google.com/file/d/1IDacRnYaPgWl7bOMz94BsqXHp-VQCDnO/view)
 
 
 
