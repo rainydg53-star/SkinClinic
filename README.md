@@ -86,7 +86,7 @@
 
 # 📕 발표 PPT
 
-🔗 [누리클리닉 발표 PPT 보기](https://drive.google.com/file/d/1IDacRnYaPgWl7bOMz94BsqXHp-VQCDnO/view)
+🔗 [누리클리닉 발표 PPT 보기](https://drive.google.com/file/d/1kjmIk83D4pVZIO99BJXZYaaLMmFbFgRf/view?usp=sharing)
 
 <br />
 <br />
