@@ -57,6 +57,15 @@
 
 ---
 
+# 📌 프로젝트 목표
+
+- 피부 진단과 시술 추천 기능 통합
+- 사용자 편의 중심 예약 시스템 구축
+- 상담·결제·알림 기능까지 하나의 플랫폼으로 제공
+- 실제 서비스 수준의 웹 플랫폼 구현
+  
+---
+
 # 👨‍💻 주요 기능
 
 ## ✅ 사용자 기능
@@ -93,25 +102,9 @@
 
 ---
 
-# 🧑‍💼 역할 분담
+# 🧑‍💼 담당 역할
 
-## 1️⃣ 박누리
-
-<div align="center">
-<img width="1362" height="708" alt="image" src="https://github.com/user-attachments/assets/5b2a4f11-1f38-4940-a101-fd60927b86a8" />
-</div>
-
-<br />
-
-## 2️⃣ 심태일
-
-<div align="center">
-<img width="1362" height="704" alt="image" src="https://github.com/user-attachments/assets/47b921df-76fe-4b48-89f7-dd3307ec9692" />
-</div>
-
-<br />
-
-## 3️⃣ 윤진성
+## 윤진성
 
 <div align="center">
 <img width="1920" height="1036" alt="image" src="https://github.com/user-attachments/assets/170e77f1-55c1-49cd-a4c8-8554060cf797" />
