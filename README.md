@@ -110,14 +110,30 @@
 <img width="1920" height="1036" alt="image" src="https://github.com/user-attachments/assets/170e77f1-55c1-49cd-a4c8-8554060cf797" />
 </div>
 
+<img width="1361" height="761" alt="image" src="https://github.com/user-attachments/assets/70be78ad-87dd-44ad-9334-e293a93a5e7e" />
+
+<img width="1361" height="761" alt="image" src="https://github.com/user-attachments/assets/f9e40c86-e06e-4002-908d-27119918024c" />
+
+<img width="1358" height="760" alt="image" src="https://github.com/user-attachments/assets/3bf698e3-847d-4081-bb50-5e3a25df8d06" />
+
+<img width="1358" height="756" alt="image" src="https://github.com/user-attachments/assets/61268dfc-1a81-4e87-8abe-c86905f48110" />
+
+
 <br />
 <br />
 
 ---
+# 📕트러블 슈팅
+-	문제 : Spring Security 적용 후 일부 API 요청에서 로그인 페이지로 302 Redirect 되는 문제가 발생했습니다.
+프론트엔드와 백엔드 연동 과정에서 인증이 필요한 경로와 허용 경로가 충돌하며 정상적인 API 호출이 이루어지지 않았습니다.
+-	해결 : SecurityConfig의 permitAll 경로와 인증 처리 구조를 다시 정리하고, 세션 인증 및 API 요청 흐름을 재구성하여 문제를 해결했습니다.
+또한 React fetch 요청에서 credentials 설정을 추가하여 세션 유지 문제를 함께 해결했습니다.
+-	성과 : Spring Security 인증 흐름과 세션 기반 로그인 구조에 대한 이해도를 높일 수 있었으며, 프론트엔드 · 백엔드 간 인증 처리 방식에 대한 실무적인 경험을 쌓을 수 있었습니다.
 
-# 📌 프로젝트 목표
 
-- 피부 진단과 시술 추천 기능 통합
-- 사용자 편의 중심 예약 시스템 구축
-- 상담·결제·알림 기능까지 하나의 플랫폼으로 제공
-- 실제 서비스 수준의 웹 플랫폼 구현
+---
+# 📌 프로젝트 소감
+
+-	이 프로젝트를 통해 단순 기능 구현이 아니라 실제 서비스 구조를 직접 설계하고 연결하는 경험을 할 수 있었습니다.
+-	회원가입, 로그인, 예약, 인증, 관리자 기능 등 여러 기능을 직접 구현하며 프론트엔드와 백엔드의 데이터 흐름을 자연스럽게 이해할 수 있었고, 오류 발생 시 원인을 분석하고 해결하는 과정에서 문제 해결 능력을 키울 수 있었습니다.
+-	또한 사용자 입장에서 기능 흐름과 사용 편의성을 고민하며 개발하는 경험을 통해 서비스 구조와 유지보수의 중요성을 배울 수 있었습니다.
